@@ -60,37 +60,54 @@
                     <ul class="nav flex-column">
                         <li class="nav-item"><a href="#introduction" class="nav-link active">Introduction</a></li>
                      
-                        <li class="nav-item"><a href="#TTT_app" class="nav-link">Prime Web</a>
+                        <li class="nav-item"><a href="#flutter_setup" class="nav-link">Setup</a>
                             <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToSetupFlutter">How to setup flutter</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#upgradeFlutter">Upgrade flutter to 2.8.1</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToRunFlutterProject">How to run flutter project</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToRunFlutterInVSCode">How to run flutter in Vs code</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#upgradeFlutter">How to setup Android Studio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangePackageName">How to change package name</a></li>
-                                
+                                <li class="nav-item"><a class="nav-link" href="#howToRunFlutterProject">How to run flutter project</a></li>
+                            </ul>
+                        </li>   
+                        <li class="nav-item"><a href="#app_setting" class="nav-link">Change Application Settings</a>
+                            <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppName">How to change application name</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppVersion">How to change application version</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppLogo">How to change application logo</a></li>
+                            </ul>
+                        </li>
 
+                        <li class="nav-item"><a href="#custom_changes" class="nav-link">Custom Changes</a>
+                            <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeURL">How to set your Website URL</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeSplashLogo">How to change splash Logo and Color</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeDisplay">How to Turn on/off Ads and Bottom Navigation</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideHeader">How to show/hide header/footer </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideSplash">How to Turn on/off Splash Screen </a></li>
-                                
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAdIds">How to change ad ids</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppColors">How to change application colors</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppFont">How to change application font</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppStrings">How to change application String Constants</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeSettingPages">How to change content of pages in Setting screen</a></li>
-
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#create_accounts" class="nav-link">Create necessary Accounts</a>
+                            <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToCreateAdmobAcct">How to Create Admob Account </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToIntegrateFirebase">How to integrate firebase</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToIntegrateOneSignal">How to integrate OneSignal</a></li>
-
-                                <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseApk">How to generate release apks</a></li>         
+                             </ul>
+                             </li>
+                             <li class="nav-item"><a href="#generate_release" class="nav-link">Generate Release APKs</a>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseApk">How to generate release apks</a></li>         
                                 <li class="nav-item"><a class="nav-link" href="#iosRelease">Steps to Publish iOS App to App Store</a></li>         
-                            </ul>
-                        </li>
+                       
+                                 </ul>
+                                 </li>
+
+                           
+
+                              
                         <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
                         <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
                         <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>                      
@@ -111,14 +128,14 @@
 
                         <hr class="divider">  
 
-                        <section id="TTT_app">
-                            <h3>Prime Web</h3>
+                        <section id="flutter_setup">
+                           
 
                             <section id="howToSetupFlutter">
                                 <h4 >How to setup Flutter</h4>
                                 <ol>
                                     <li>Download Lastest Flutter SDK from below link. In that click on flutter_window_xxx.zip button.</li>
-                                    <li><a href="https://flutter.dev/docs/get-started/install/windows">Flutter sdk Here</a>
+                                    <li><a href="https://flutter.dev/docs/get-started/install/windows">Get Flutter sdk </a>
                                         <img src="images/app/setup.png" alt = "Prime Web"/>	
                                     </li> 
                                     <li>Extract the zip file and copy flutter folder into your desired installation location for the
@@ -141,34 +158,78 @@
                                     <li>open cmd and do following shown in below picture
                                         <img src="images/app/check.png" alt="Prime Web" />
                                     </li>
-                                    <li>Now open Android Studio and create new flutter project then select your flutter sdk file to the
-                                        location where we have downloaded earlier and that's it
-                                        <img src="images/app/flutter.png" alt="Prime Web" />
+                                    <li>Now open Android Studio and click on 'Open' then select 'Prime Web' folder that you have downloaded from codecanyon. (choose primeWEb_firebase or primeweb_onesignal ,according to your requirement)
+                                        <li>Click on open
+                                            <img src="images/app/flutter2.png" alt="Prime Web" />
+                                        </li>
+                                        <li>Select folder of primeweb
+                                            <img src="images/app/flutter3.png" alt="Prime Web" />
+                                        </li>
+                                        <li>Now if you have not set 'flutter sdk' path before. then go to File->Settings
+                                            <img src="images/app/flutter4.png" alt="Prime Web" />
+                                        </li>
+                                        <li>From left pane, open 'Languages and Frameworks' and click on 'flutter', then on right panel set path of flutter folder that you have downloaded in first step
+                                            <img src="images/app/flutter5.png" alt="Prime Web" />
+                                        </li>
+                                        <li>It will set Dart SDK automatically, but if does not. then from left panel click on 'dart' and set 'dart-sdk' path as shown in image
+                                            <img src="images/app/flutter6.png" alt="Prime Web" />
+                                        </li>
                                     </li>
                                 </ol>
                                 <hr> 
                             </section>
+                          
 
                             <section id="upgradeFlutter">
-                                <h4>Upgrade to flutter 2.8.1</h4>
+                                <h4>Upgrade flutter</h4>
                                 <ol>
-                                    <li>for upgrade go to terminal in android studio and type flutter upgrade it will automatically pick latest version with stable channel</li>
+                                    <li>for upgrade go to terminal in android studio and type 'flutter upgrade' it will automatically pick latest version with stable channel</li>
                                     <li>If you have updated flutter 2.x after upgrade run flutter doctor. and in flutter doctor if you see below error like licence status unknown.
                                         <img src="images/app/upgrade1.png" alt="Prime Web" />
                                     </li>
-                                    <li>Then go to sdk manager from upar right corner, then go to android sdk  and then uncheck 'hide obsolute package' then check 'android sdk command line tool latest' then apply and then ok. it will download latest version  as shown in below fig.
+                                    <li>Then go to sdk manager from uper right corner, then go to android sdk  and then uncheck 'hide obsolute package' then check 'android sdk command line tool latest' then apply and then ok. it will download latest version  as shown in below fig.
                                         <img src="images/app/upgrade2.png" alt="Prime Web" />
                                     </li>
                                     <li>now run flutter doctor again your error will be removed</li>
                                 </ol>					
                                 <hr> 
                             </section>
-
+                            <section id="howToChangePackageName">
+                                <h4>How to change package name</h4>
+                                <ol>
+                                    <li>In the Android panel, click on the little gear icon.Uncheck/Deselect the Compact Empty Middle Packages option.<br>
+                                        <img src="images/app/packagename_1.png" alt="Prime Web" />
+                                    </li>
+                                    <li>Your package directory will now be broken up in individual directories.<br>
+                                        <img src="images/app/packagename_2.png" alt="Prime Web" />
+                                    </li>
+                                    <li>Individually select each directory you want to rename, and: Right-click it Select Refactor Click on Rename current In the Pop-up dialog.<br>
+                                        <img src="images/app/packagename_3.png" alt="Prime Web" />
+                                    </li>
+                                    <li>Enter the new name and hit Refactor.Allow a minute to let Android Studio update all changes.<br>
+                                        <img src="images/app/packagename_4.png" alt="Prime Web" />
+                                    </li>
+                                    <li>after changing 'com.wrteam.prime_web' , your directory should look like this(new name is just for example purpose) Please give meaningful package name<br>
+                                    <img src="images/app/packagename_5.png" alt="Prime Web" />
+                                    <img src="images/app/packagename_6.png" alt="Prime Web" />
+                                </li>
+                                    <li>Now press ctrl + shift + R and replace old packagename with your new packagename<br>
+                                        <img src="images/app/packagename_7.png" alt="Prime Web" />
+                                    </li>
+                                    <li>For ios, open ios > Runner > info.plist, search for key CFBundleIdentifier, its value is coming from varable named 'PRODUCT_BUNDLE_IDENTIFIER'
+                                        So press Ctrl_Shift+F and search for 'PRODUCT_BUNDLE_IDENTIFIER' and at evry place change value of this variable<br>
+                                        For example, in this project ios package name is 'com.wrteam.webviewprime' so change it to your package name
+                                        <img src="images/app/packagename_8.png" alt="Prime Web" /><br/>
+                                    </li>                                   
+                                </ol>
+                                <hr> 
+                            </section>
                             <section id="howToRunFlutterProject">
                                 <h4>How to run flutter project</h4>
-                                <img src="images/app/open2.png" alt="Prime Web" />
+                              
                                 <ol>
-                                    <li>Go to file > open > then choose your downloaded project location then your project will open. if you see upper right part 'enable dart support' then click that and go to pubspec.yaml file and in uper right part click 'pub get' or 'package get' and then press run button.</li>
+                                    <li>Now to run project, if you see upper right part 'enable dart support' then click that and go to pubspec.yaml file and in uper right part click 'pub get' or 'package get' and then press run button.</li>
+                                    <img src="images/app/open2.png" alt="Prime Web" />
                                     <li><b>If you are getting error then you can perform below hack</b>
                                     <li>if in your system firewall is on, then you can temporary disable firewall and then try to run project</li>
                                     <li>if your flutter channel is not stable then you need to change it to stable. you can check your flutter channel by terminal. </li>
@@ -178,65 +239,27 @@
                                     <li>if your are not in stable then write "flutter channel stable"</li>
                                     <li>go to Tools > Flutter > Flutter Clean.</li>
                                     <li>go to file > invalidate cache/ restart</li>
-                                </ol>					
-                                <hr> 
-                            </section>
-
-
-                            <section  id="howToRunFlutterInVSCode">
-                                <h4>How to run flutter in Vs code</h4>
-                                <ol>
-                                    <li>Visual Studio Code is a lightweight but powerful source code editor(optinal)(for vscode, all above setup for Android Studio are required).</li>
-                                    <li>For Download VSCode <a href="https://code.visualstudio.com/Download" style='color:#2889B9' target="_blank">Click Here</a></li>
-                                    <li>Open vs code and go to terminal option and open terminal
-                                        <img src="images/app/vscode1.png" alt="Prime Web" />
-                                    </li>
-                                    <li>Inside Terminal For Run the Application perform this two command 1. flutter pub get (flutter packages get) 2. flutter run </li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangePackageName">
-                                <h4>How to change package name</h4>
-                                <ol>
-                                    <li>In the Android panel, click on the little gear icon.Uncheck/Deselect the Compact Empty Middle Packages option.
-                                        <img src="images/app/packagename_1.png" alt="Prime Web" />
-                                    </li>
-                                    <li>Your package directory will now be broken up in individual directories.
-                                        <img src="images/app/packagename_2.png" alt="Prime Web" />
-                                    </li>
-                                    <li>Individually select each directory you want to rename, and: Right-click it Select Refactor Click on Rename current In the Pop-up dialog.
-                                        <img src="images/app/packagename_3.png" alt="Prime Web" />
-                                    </li>
-                                    <li>Enter the new name and hit Refactor.Allow a minute to let Android Studio update all changes.
-                                        <img src="images/app/packagename_4.png" alt="Prime Web" />
-                                    </li>
-                                    <li>Now press ctrl + shift + R and replace old packagename with your new packagename
-                                        <img src="images/app/packagename_5.png" alt="Prime Web" />
-                                    </li>
-                                    <li>For ios open ios > Runner > info.plist > there is the key CFBundleIdentifier change the string value for that as shown in below
-                                        <img src="images/app/packagename_6.png" alt="Prime Web" /><br/>
-                                       
-                                    </li>                                   
-                                    <li>similar if you are using VSCode, for search press ctrl + F search old package name as given files in below image and replace with your package name. 
-                                        <img src="images/app/package_name1.png" alt="Prime Web" />
-                                    </li>
-                                </ol>
+                                    <li>If all set, then select device or run emulator, and click on 'Play' icon in uper right corner <br>
+                                        To run app in physical device, you have to enable 'Developer Options' and 'USB Debugging' in your phone
+                                        <img src="images/app/runapp.png" alt="Prime Web" />
+                                        <font color ="red">please keep in mind that, if you have run 'primeweb_firebase' app then don't forget to setup firebase and set  'google-services.json' file before running app. Steps are explained in step<a  href="#howToIntegrateFirebase">How to integrate firebase</a></li> </font>
+                                    </ol>					
                                 <hr> 
                             </section>
 
 
 
-
+                           
+                        </section>
+                        <section  id="app_setting">
                             <section  id="howToChangeAppName">
                                 <h4>How to change application name</h4>
                                 <ol>
                                     <img src="images/app/TTTAppName.png" alt="Prime Web" />
-                                    <li>Change application name for your android application. Go to android/app/src/main/AndroidManifest.xml and change name
+                                    <li>Change application name for your android application. Go to android/app/src/main/AndroidManifest.xml and change value of 'android:label'
                                         <img src="images/app/changeAppNAmeAndroid.png" alt="Prime Web" />
                                     </li> 
-                                    <li>Change application name for your ios application. Go to ios/Runner/Info.plist and change name
+                                    <li>Change application name for your ios application. Go to ios/Runner/Info.plist and change value of 'CFBundleName'
                                         <img src="images/app/changeAppNameIOS.png" alt="Prime Web" />
                                     </li>                                    
                                 </ol>
@@ -248,9 +271,9 @@
                                 <h4>How to change application version</h4>
                                 <ol>
                                     <li>
-                                        go to pubspec.yaml EX.Update version:A.B.C+X in pubspec.yaml.
+                                        go to pubspec.yaml and change 'version'. for example. version:1.0.1+2 .
                                     </li>   
-                                    <li>Do not forget to execute flutter packages get, flutter build or flutter run after this step</li>   
+                                    <li><font color ="red">Do not forget to execute flutter packages get,  flutter run after this step</font></li>   
                                 </ol>
                                 <img src="images/app/changeAppVersion.png" alt="Prime Web" />
                                 <hr> 
@@ -259,22 +282,22 @@
                             <section id="howToChangeAppLogo">
                                 <h4>How to change application logo</h4>
                                 <ol>
-                                    <li>For Android, open android > app > src > main > res > mipmap add here your logo according to device screen size                
+                                    <li>For Android, open android > app > src > main > res > add paste your logo in all mipmap folders according to device screen size                
                                         <img src="images/app/changeAppIconinAndroid.png" alt="Prime Web" />  
                                     </li> 
                                     <li>For IOS  open ios > Runner > Assets.xcassets > AppIcon.appiconset here you need to put your logo according to diffrent size.
-                                        <img src="images/app/changeAppIconInIOS.png" alt="Prime Web" />
+                                        <img src="images/app/changeAppIconInIOS.png" alt="Prime Web"/>
                                     </li> 
                                 </ol>
                                 <hr> 
                             </section>
-
-
+</section>
+<section id="custom_changes">
                             <section id="howToChangeURL">
                                 <h4>How to set Your Website URL</h4>
                                 <ol>    
                                     <li>
-                                        If you want to set the URL of your website, the page which shown in home page (USE PROPER URL FORMAT, i.e starts with 'https://')
+                                        To set the URL of your website( the website which shown in home page),paste your url in varable 'webInitialUrl' (USE PROPER URL FORMAT, i.e starts with 'http://' or 'https://')
                                         <img src="images/app/changeURL.png" alt="Prime Web" />
                                         
                                     </li> 
@@ -282,7 +305,23 @@
                                 </ol>
                                 <hr> 
                             </section>
-                            
+                            <section id="howToChangeSplashLogo">
+                                <h4>How to change Splash logo and Color</h4>
+                                <ol>    
+                                    <li>
+                                        To chnage splash logo, create logo in 'svg' format and replace 'splash_logo.svg' in icons folder
+                                        <img src="images/app/chnage_splash_logo.png" alt="Prime Web" /><br><br>
+                                        
+                                    </li> 
+                                    <li>
+                                        To chnage splash color, change the value of varibale as shown in below figure 
+                                        <img src="images/app/change_splash_color.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
                             <section id="howToChangeDisplay">
                                 <h4>How to Turn on/off Ads and Bottom Navigation</h4>
                                 <ol>    
@@ -345,9 +384,6 @@
                                 <hr> 
                             </section>
 
-
-                    
-
                             <section id="howToChangeAppColors">
                                 <h4>How to change application colors</h4>
                                 <ol>    
@@ -374,7 +410,7 @@
                                         <img src="images/app/changeFont.png" alt="Prime Web" />
                                     </li>
                                     <li>
-                                        Now as per shown in below image, change fontfamily name in main.dart file
+                                        Now as per shown in below image, change fontfamily name in theme_provider.dart file
                                         <img src="images/app/changeFont2.png" alt="Prime Web" />
                                     </li>
                                      
@@ -385,7 +421,7 @@
                                 <h4>How to change application String Constants</h4>
                                 <ol>    
                                     <li>
-                                        Go to lib->helpers->Strings.dart as shown in image and change values<br>
+                                        Go to lib->helpers->Strings.dart as shown in image and change values of variable you want to chaneg according to your app<br>
 
                                         <img src="images/app/changeAppStrings1.png" alt="Prime Web" />
                                     </li>
@@ -411,6 +447,7 @@
                                 </ol>
                                 <hr> 
                             </section>
+</section>
 
                             <section id="howToCreateAdmobAcct">
                                 <h4>Set up admob in app</h4>
@@ -455,8 +492,7 @@
                                     <li>Add andorid application to your firebase project
                                         <img src="images/app/addAndroid.png" alt="Prime Web" />
                                     </li>   
-                                    <li>Visit<a href =' https://developers.google.com/android/guides/client-auth'></a> to know how to get sha-1 key
-                                        <img src="images/app/addAndroid2.png" alt="Prime Web" /><br>
+                                    <li> Download this google-services.json file and put indsie  android/app folder
                                         <img src="images/app/addAndroid3.png" alt="Prime Web" /><br>
                                         <img src="images/app/addAndroid4.png" alt="Prime Web" /><br>
                                     </li>
@@ -467,7 +503,10 @@
                                     <li>Get your bundle id here [your-flutter-project-dir]\ios\Runner.xcodeproj\project.pbxproj or search for
                                         PRODUCT_BUNDLE_IDENTIFIER and you will get following result 
                                         <img src="images/app/addIos3.png" alt="Prime Web" /><br>
-                                        <img src="images/app/addIos2.png" alt="Prime Web" /><br>
+                                        <img src="images/app/addIos2.png" alt="Prime Web" /><br><br>
+                                        <li>
+                                            Download this GoogleService-Info.plist file and put indsie  ios/Runner folder
+                                        </li>
                                         <img src="images/app/addIos4.png" alt="Prime Web" /><br>
                                         <img src="images/app/addIos5.png" alt="Prime Web" /><br>
                                         <img src="images/app/addIos6.png" alt="Prime Web" />
@@ -506,10 +545,12 @@
                                     <li>Now copy App ID as shown below
                                         <img src="images/app/onesignal5.png" alt="Prime Web" /><br>
                                     </li>
-                                    <li>Paste thia App ID here [your-flutter-project-dir]\lib\helpers\Constant.dart ['don't change variable names]
+                                    <li>Paste this App ID here [your-flutter-project-dir]\lib\helpers\Constant.dart ['don't change variable names]
                                         <img src="images/app/onesignal6.png" alt="Prime Web" /><br>
                                     </li>
-                                   
+                                    <li>If you didn't have copy app id before then you can get Onesignal App ID from this settings
+                                        <img src="images/app/onesignal7.png" alt="Prime Web" /><br>
+                                    </li>
                                     <li>You have connected android application to your Onesignal account successfully</li>
                                     
                                 </ol>
@@ -533,16 +574,19 @@
                                   
                                    
                                     <li>You have connected ios application to your Onesignal account successfully</li>
-                                  Note: here for IOS Bundle ID is  'com.wrteam.webviewprime', So don't forget to replace this ID throught the project with your IOS Bundle ID
+                            <font color="red">    Note: here for IOS Bundle ID is  'com.wrteam.webviewprime', So don't forget to replace this ID throught the project with your IOS Bundle ID</font>  
+                                  <li>Here in Onesignal folder, replace your own Bundle id with old one</li>
+                                  <img src="images/app/onesignal8.png" alt="Prime Web" /><br>
                                 </ol>
                                 <hr> 
                             </section>
+                            <section  id="generate_release">    
                             <section  id="howToGenerateReleaseApk">
-                                <h4>How to generate release apks</h4>
+                                <h4>Generate Release bundle for Android</h4>
                             
 								<ol>
 									<li>In your android studio, right click on you 'android' module of you flutter
-										project. There is one option 'flutter', click on that. Then click on 'Opan android module in android studio'.then
+										project. There is one option 'flutter', click on that. Then click on 'Open android module in android studio'.then
 										generate release apk from that new module.</li>
 
 									<br>
@@ -555,12 +599,16 @@
 									<br>
 									<img src="images/apk2.png" alt="Prime Web" /><br><br>
 									<img src="images/apk3.png" alt="Prime Web" /><br><br>
-									<li>In Build menu there is option generate signed bundle/apk.</li>
-
+									<li>Wait for build process to finish. If build finish successfully then, in Build menu you will get option 'generate signed bundle/apk'.</li>
 									<br>
 									<img src="images/apk4.png" alt="Prime Web" /><br><br>
-
-
+                                    <li> Choose 'Android App Bundle' here</li>
+                                        <img src="images/apk5.png" alt="Prime Web" /><br><br>
+                                    <li>If you are creating apk for first time then click on 'Create New' for Keystore path (and save this file for future use). for subsequent version updates always choose existing keystore file </li>
+                                    <li>Fill all required information and click next</li>
+                                    <img src="images/apk6.png" alt="Prime Web" /><br><br>
+                                    <li>from options, choose 'release'</li>
+                                    <img src="images/apk7.png" alt="Prime Web" /><br><br>
 								</ol>
 
                                 <hr> 
@@ -604,6 +652,7 @@
 
                                 <hr> 
                             </section>
+</section>
 
                         </section>
                         <hr class="divider">  
@@ -630,7 +679,7 @@
                             <p>Dear valuable customer,
                                 Thank you very much for choosing our product.
                                 It's our pleasure to serve top-notch service to you.
-                                Please give us your honest feedback that will help us to make a more strong and reliable product by click here <a href="https://codecanyon.net/user/wrteam/portfolio" style="color:#3c55d1" target="_blank">Rate Us</a>.
+                                Please give us your honest feedback that will help us to make a more strong and reliable product by click here <a href="https://codecanyon.net/item/prime-web-convert-website-to-a-flutter-app/35935177?s_rank=2" style="color:#3c55d1" target="_blank">Rate Us</a>.
                                 Thank you very much.</p>
                         </section>
                         <hr class="divider">  
