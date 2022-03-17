@@ -242,14 +242,12 @@
                                     <li>If all set, then select device or run emulator, and click on 'Play' icon in uper right corner <br>
                                         To run app in physical device, you have to enable 'Developer Options' and 'USB Debugging' in your phone
                                         <img src="images/app/runapp.png" alt="Prime Web" />
-                                        <font color ="red">please keep in mind that, if you have run 'primeweb_firebase' app then don't forget to setup firebase and set  'google-services.json' file before running app. Steps are explained in step<a  href="#howToIntegrateFirebase">How to integrate firebase</a></li> </font>
+                                        <font color ="red">please keep in mind that, 1) if you have run 'primeweb_firebase' app then don't forget to setup firebase and set  'google-services.json' file before running app. Steps are explained in step<a  href="#howToIntegrateFirebase">How to integrate firebase</a>
+                                        2) and if you run primeweb_onesignal app then first setup for onesignal as explained in <a href="#howToIntegrateOneSignal">How to integrate onesignal</a>
+                                        </li> </font>
                                     </ol>					
                                 <hr> 
                             </section>
-
-
-
-                           
                         </section>
                         <section  id="app_setting">
                             <section  id="howToChangeAppName">
@@ -273,7 +271,7 @@
                                     <li>
                                         go to pubspec.yaml and change 'version'. for example. version:1.0.1+2 .
                                     </li>   
-                                    <li><font color ="red">Do not forget to execute flutter packages get,  flutter run after this step</font></li>   
+                                    <li><font color ="red">Do not forget to execute 'flutter pub get',and  'flutter run' after this step</font></li>   
                                 </ol>
                                 <img src="images/app/changeAppVersion.png" alt="Prime Web" />
                                 <hr> 
@@ -474,12 +472,12 @@
                                     <li>Add your ad unit id same  way explain in previous step : <a href="#howToChangeAdIds">Like this</a>
                                        
                                     </li>
+                                    </li>
                                 </ul>
                                 <hr>
                             </section>
 
-
-
+<section id="create_accounts">
                             <section  id="howToIntegrateFirebase">
                                 <h4>How to integrate firebase</h4>
                                 <ol>
@@ -527,8 +525,6 @@
                                     <li>Create onesignal project in your account 
                                         Choose android platform
                                         <img src="images/app/onesignal1.png" alt="Prime Web" /><br>
-                                       
-                                       
                                       
                                     </li>
                                   
@@ -554,7 +550,14 @@
                                     <li>You have connected android application to your Onesignal account successfully</li>
                                     
                                 </ol>
-
+                                <h6>How to set onesignal Notification icon  </h6>
+                                <ol>
+                                <li>If you don't want to get deafault bel icon in notification, then you have to generate icons for notifications</li>
+                                <li>You can refer this link on how to generate these icons: <a href="https://documentation.onesignal.com/docs/customize-notification-icons"></a></li>
+                                <li>and paste each icon in folders accroding to their size, as shown in below image</li> 
+                                <img src="images/app/onesignal_icons.png" alt="Prime Web" /><br>
+                          </ol>
+                          <h6>Create onesignal IOS account  </h6>
                                 <ol>
                                     
                                     <li>Now follow below steps to create IOS app in onesignal </li>
@@ -580,6 +583,7 @@
                                 </ol>
                                 <hr> 
                             </section>
+                        </section>
                             <section  id="generate_release">    
                             <section  id="howToGenerateReleaseApk">
                                 <h4>Generate Release bundle for Android</h4>
