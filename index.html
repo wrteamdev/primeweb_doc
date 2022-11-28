@@ -79,11 +79,13 @@
                         <li class="nav-item"><a href="#custom_changes" class="nav-link">Custom Changes</a>
                             <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeURL">How to set your Website URL</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeSplashLogo">How to change splash Logo and Color</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeDisplay">How to Turn on/off interstitial and banner Ads</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeBottomBar">How to change bottom bar</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideHeader">How to show/hide header/footer </a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToHideSplash">How to Turn on/off Splash Screen </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToHideSplash">How to Turn on/off Splash & Onboarding Screen </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeSplashLogo">How to change splash Logo and Color</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToHideOnboarding">How to Turn on/off Onboarding Screen </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeOnboardingScreen">How to change onboarding screen elements</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAdIds">How to change ad ids</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppColors">How to change application colors</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppFont">How to change application font</a></li>
@@ -91,16 +93,21 @@
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeSettingPages">How to change content of pages in Setting screen</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item"><a href="#add_permission" class="nav-link">Add necessary Permissions</a>
+                          
+                            </li>
+
                         <li class="nav-item"><a href="#create_accounts" class="nav-link">Create necessary Accounts</a>
                             <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToCreateAdmobAcct">How to Create Admob Account </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToIntegrateFirebase">How to integrate firebase</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToIntegrateOneSignal">How to integrate OneSignal</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToAddDynamicLink">How to add dynamic links in firebse</a></li>
                              </ul>
                              </li>
                              <li class="nav-item"><a href="#generate_release" class="nav-link">Generate Release APKs</a>
                                 <ul class="nav flex-column">
-                                    <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseApk">How to generate release apks</a></li>         
+                                <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseApk">How to generate release apks</a></li>         
                                 <li class="nav-item"><a class="nav-link" href="#iosRelease">Steps to Publish iOS App to App Store</a></li>         
                        
                                  </ul>
@@ -169,7 +176,7 @@
                                         <li>Now if you have not set 'flutter sdk' path before. then go to File->Settings
                                             <img src="images/app/flutter4.png" alt="Prime Web" />
                                         </li>
-					 <li>If you have not installed plugin before then click on 'plugins' tab and install flutter,dart and kotlin plugins
+                                        <li>If you have not installed plugin before then click on 'plugins' tab and install flutter,dart and kotlin plugins
                                             <img src="images/app/flutter7.png" alt="Prime Web" />
                                         </li>
                                         <li>From left pane, open 'Languages and Frameworks' and click on 'flutter', then on right panel set path of flutter folder that you have downloaded in first step
@@ -188,10 +195,10 @@
                                 <h4>Upgrade flutter</h4>
                                 <ol>
                                     <li>for upgrade go to terminal in android studio and type 'flutter upgrade' it will automatically pick latest version with stable channel</li>
-                                    <li>If you have updated flutter 2.x after upgrade run flutter doctor. and in flutter doctor if you see below error like licence status unknown.
+                                    <li>If you have updated flutter, after upgrade run flutter doctor. and in flutter doctor if you see error like 'licence status unknown' then run 'flutter doctor --android-licenses'.
                                         <img src="images/app/upgrade1.png" alt="Prime Web" />
                                     </li>
-                                    <li>Then go to sdk manager from uper right corner, then go to android sdk  and then uncheck 'hide obsolute package' then check 'android sdk command line tool latest' then apply and then ok. it will download latest version  as shown in below fig.
+                                    <li> Go to sdk manager from uper right corner, then go to android sdk  and then uncheck 'hide obsolute package' then check 'android sdk command line tool latest' then apply and then ok. it will download latest version  as shown in below fig.
                                         <img src="images/app/upgrade2.png" alt="Prime Web" />
                                     </li>
                                     <li>now run flutter doctor again your error will be removed</li>
@@ -230,7 +237,7 @@
                             </section>
                             <section id="howToRunFlutterProject">
                                 <h4>How to run flutter project</h4>
-                              
+                                <ol> <li>Run Android app</li>
                                 <ol>
                                     <li>Now to run project, if you see upper right part 'enable dart support' then click that and go to pubspec.yaml file and in uper right part click 'pub get' or 'package get' and then press run button.</li>
                                     <img src="images/app/open2.png" alt="Prime Web" />
@@ -249,7 +256,17 @@
                                         <font color ="red">please keep in mind that, 1) if you have run 'primeweb_firebase' app then don't forget to setup firebase and set  'google-services.json' file before running app. Steps are explained in step<a  href="#howToIntegrateFirebase">How to integrate firebase</a>
                                         2) and if you run primeweb_onesignal app then first setup for onesignal as explained in <a href="#howToIntegrateOneSignal">How to integrate onesignal</a>
                                         </li> </font>
-                                    </ol>					
+                                    </ol>	
+                                    <li>Run IOs app</li>
+                                    Setup is same in android studio as in android app.<br> To run app follow below steps: <br>
+                                Open terminal, set the path to your project <br>
+                                   1) flutter clean <br>
+                                   2) flutter pub get<br>
+                                   3) cd ios<br>
+                                   4) pod install<br>
+                                   5) If pods are installed successfully, then go to android studio and run 'flutter run'<br>
+                                   6) if you are getting errors in pod install then delete .symlinks folder, Pods folder and Podfile.lock file from ios folder. Then follow all the above steps again<br>
+                                </ol>
                                 <hr> 
                             </section>
                         </section>
@@ -273,7 +290,7 @@
                                 <h4>How to change application version</h4>
                                 <ol>
                                     <li>
-                                        go to pubspec.yaml and change 'version'. for example. version:1.0.1+2 .
+                                        go to pubspec.yaml and change 'version'. for example: If previous version is 1.0.0+1 then change it to 1.0.1+2 .
                                     </li>   
                                     <li><font color ="red">Do not forget to execute 'flutter pub get',and  'flutter run' after this step</font></li>   
                                 </ol>
@@ -307,23 +324,7 @@
                                 </ol>
                                 <hr> 
                             </section>
-                            <section id="howToChangeSplashLogo">
-                                <h4>How to change Splash logo and Color</h4>
-                                <ol>    
-                                    <li>
-                                        To chnage splash logo, create logo in 'svg' format and replace 'splash_logo.svg' in icons folder
-                                        <img src="images/app/chnage_splash_logo.png" alt="Prime Web" /><br><br>
-                                        
-                                    </li> 
-                                    <li>
-                                        To chnage splash color, change the value of varibale as shown in below figure 
-                                        <img src="images/app/change_splash_color.png" alt="Prime Web" />
-                                        
-                                    </li> 
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
+                          
                             <section id="howToChangeDisplay">
                                 <h4>How to Turn on/off Ads </h4>
                                 <ol>    
@@ -362,10 +363,10 @@
                                 <hr> 
                             </section>
                             <section id="howToHideSplash">
-                                <h4>How to show/hide Splash Screen</h4>
+                                <h4>How to show/hide Splash & Onboarding Screen</h4>
                                 <ol>    
                                     <li>
-                                       If you wnat to display splash screen in app starting time then change this variable. Set true if you want to show it  [Note: Value must be boolean , i.e. either true or false]
+                                       If you wnat to display splash screen or onboarding screen in app starting time then change this variable. Set true if you want to show it  [Note: Value must be boolean , i.e. either true or false]
                                         <img src="images/app/changesplash.png" alt="Prime Web" />
                                         
                                     </li> 
@@ -373,8 +374,46 @@
                                 </ol>
                                 <hr> 
                             </section>
-
-                       
+                            <section id="howToChangeSplashLogo">
+                                <h4>How to change Splash logo and Color</h4>
+                                <ol>    
+                                    <li>
+                                        To chnage splash logo, create logo in 'svg' format and replace 'splash_logo.svg' in icons folder
+                                        <img src="images/app/chnage_splash_logo.png" alt="Prime Web" /><br><br>
+                                        
+                                    </li> 
+                                    <li>
+                                        To chnage splash color, change the value of varibale as shown in below figure 
+                                        <img src="images/app/change_splash_color.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+                           
+                            <section id="howToChangeOnboardingScreen">
+                                <h4>How to change onboarding screen elements</h4>
+                                <ol>    
+                                    <li>
+                                        To chnage onboarding images, create images in 'svg' format and replace 'onboarding_a.svg','onboarding_b.svg' & 'onboarding_c.svg' in icons folder
+                                        <img src="images/app/changeOnbrdngImage.png" alt="Prime Web" /><br><br>
+                                        
+                                    </li> 
+                                    <li>
+                                        To chnage text of onboarding screens, change the value of below string varibale as shown in below figure 
+                                        <img src="images/app/changeOnbrdngText.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    <li>
+                                        To chnage Colors of onboarding screens, change the value of below color varibale as shown in below figure 
+                                        <img src="images/app/changeOnbrdngColor.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
                          
 
                             <section id="howToChangeAdIds">
@@ -467,21 +506,21 @@
                                 <ul>
                                     <li>Add an android app.</li>
                                     <li>In the  <a href="https://apps.admob.com" style="color:red">Admob console,</a> click add android app from the Apps menu.
-                                        <img src="images/app/admob1.png" alt="news" />
+                                        <img src="images/app/admob1.png" alt="Prime Web" />
                                     </li>
                                     <li>Enter your app name and Enabling user metrics is not necessary to complete this codelab. However, we recommend that you do because it allows you to understand user behavior in more detail and click on ADD APP button.
-                                        <img src="images/app/admob2.png" alt="news" /><br>
-                                        <img src="images/app/admob1.png" alt="news" />
+                                        <img src="images/app/admob2.png" alt="Prime Web" /><br>
+                                        <img src="images/app/admob1.png" alt="Prime Web" />
                                     </li>
                                     <li>Create ad units.
-                                        <img src="images/app/admob3.png" alt="news" />
+                                        <img src="images/app/admob3.png" alt="Prime Web" />
                                     </li>
                                     <li>Select Banner unit ad and enter banner unit ad name then click on Create ad Unit button. Same procedure follow to create Interstitial ad)
-                                        <img src="images/app/admob4.png" alt="news" /><br>
-                                        <img src="images/app/admob5.png" alt="news" />
+                                        <img src="images/app/admob4.png" alt="Prime Web" /><br>
+                                        <img src="images/app/admob5.png" alt="Prime Web" />
                                     </li>
-                                    <li> Then add another unit add shown in below image and Same as above create Interstitial ads and native ads.
-                                        <img src="images/app/admob6.png" alt="news" />
+                                    <li> Then add another unit add shown in below image and Same as above create Interstitial ads and Open ads.
+                                        <img src="images/app/admob6.png" alt="Prime Web" />
                                     </li>
                                     <li>Same as Add iOS app and same as add units in iOS app.</li>
                                     <li>Add your ad unit id same  way explain in previous step : <a href="#howToChangeAdIds">Like this</a>
@@ -491,8 +530,68 @@
                                 </ul>
                                 <hr>
                             </section>
+                            <section id="add_permission">
+                                <h4>How to add necessary permissions</h4><ol>
 
-<section id="create_accounts">
+                                    <ol>
+                                    <h5>Android -> List of permission (Note- just remove below required permissions from AndroidManifest file)</h5>
+                                           
+                                                <li>For storage access</li>
+                                                <p>  &#60;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&#62;</p>
+                                                <li>For camera access</li>
+                                                <p>  &#60;uses-permission android:name="android.permission.CAMERA" /&#62;</p>
+                                                <p>  &#60;uuses-feature android:name="android.hardware.camera" /&#62;</p>
+                                                <li>For Audio device access</li>
+                                                <p>  &#60;uses-permission android:name="android.permission.RECORD_AUDIO" /&#62;</p>
+                                                <p>  &#60;uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&#62;</p>
+                                                <li>For capture video access</li>
+                                                <p>  &#60;uses-permission android:name="android.permission.VIDEO_CAPTURE" /&#62;</p>
+                                                <p>  &#60;uses-permission android:name="android.permission.AUDIO_CAPTURE" /&#62;</p>
+                                               
+                                                 <li> location related permissions permission</li>
+                                                 <p>  &#60;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&#62;</p>
+                                                <p>--- Include below permission only if your app benefits from precise location access. </p>
+                                                <p>  &#60;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&#62;</p>
+                                                <p>--- Required only when requesting background location access on
+                                                    Android 10 (API level 29) and higher. </p>
+
+                                                    <p>  &#60;uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /&#62;</p>
+                                               </li>
+                                            </ol>
+                                <li> Open android->src->main->AndroidManifest.xml file. uncomment required permissions as shown in below figure:</li>
+                                <img src="images/app/addPermission.png" alt="Prime Web" />
+                          
+
+<ol>
+    <h5>IOS  -> List of permission (Note- just remove below required permissions from info.plist file)</h5>
+                                           
+    <li>For galley access</li>
+    <p>  &#60;key>NSPhotoLibraryAddUsageDescription &#60;/key&#62;<br>
+        &#60;string>This will use to get or pick imge from gallery to set your profile photo. &#60;/string&#62;</p>
+    <li>For camera access</li>
+    <p>  &#60;key>NSCameraUsageDescription&#60;/key&#62;<br>
+        &#60;string>This app requires access to the Camera to capture your profile photo. &#60;/string&#62;</p>
+
+    <li>For Microphone access</li>
+    <p>  &#60;<key>NSMicrophoneUsageDescription &#60;/key&#62;<br>
+        &#60;string> This require listens for speech on the device microphone on your request for voice search. &#60;/string&#62;</p>
+
+   
+   
+     <li> location related permissions permission</li>
+     <p>  &#60;key>NSLocationAlwaysUsageDescription&#60;/key&#62;<br>
+        &#60;string>Your location is required for xyz benefits for you&#60;/string&#62;<br>
+        &#60;key>NSLocationWhenInUseUsageDescription&#60;/key&#62;<br>
+        &#60;string>Your location is required for xyz benefits for you&#60;/string>&#62;</p>
+ 
+   </li>
+</ol>
+<li> Open ios/Runner/Info.plist file. uncomment required permissions as shown in below figure:</li>
+<img src="images/app/addPermission2.png" alt="Prime Web" />
+</ol>
+                            </section>
+
+                        <section id="create_accounts">
                             <section  id="howToIntegrateFirebase">
                                 <h4>How to integrate firebase</h4>
                                 <ol>
@@ -598,13 +697,20 @@
                                 </ol>
                                 <hr> 
                             </section>
+                        <section id="howToAddDynamicLink">
+                            <h4>How to add dynamic link in firebase account</h4>
+                            <ol>
+                                <li>
+                                    <img src="images/app/addDeeplink.png" alt="Prime Web" /><br>
+                                </li>
+                            </ol>
+                        </section>
                         </section>
                             <section  id="generate_release">    
                             <section  id="howToGenerateReleaseApk">
                                 <h4>Generate Release bundle for Android</h4>
                             
 								<ol>
-									<li>Please remove unnecessary permissions from 'android\app\src\main\AndroidManifest.xml' file (e.g remove location permissions if your website dont use location permission)</li>
 									<li>In your android studio, right click on you 'android' module of you flutter
 										project. There is one option 'flutter', click on that. Then click on 'Open android module in android studio'.then
 										generate release apk from that new module.</li>
