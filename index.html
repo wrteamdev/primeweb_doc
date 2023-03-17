@@ -79,12 +79,14 @@
                         <li class="nav-item"><a href="#custom_changes" class="nav-link">Custom Changes</a>
                             <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeURL">How to set your Website URL</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeDisplay">How to Turn on/off interstitial and banner Ads</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeDisplay">How to Turn on/off interstitial, banner and Open Ads</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeBottomBar">How to change bottom bar</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeTabsInBottomBar">How to add/remove tabs in bottom navigation bar</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideHeader">How to show/hide header/footer </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideSplash">How to Turn on/off Splash & Onboarding Screen </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeSplashLogo">How to change splash Logo and Color</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToHideOnboarding">How to Turn on/off Onboarding Screen </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeFloatingColor">How to change floating action button color</a></li>
+                        
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeOnboardingScreen">How to change onboarding screen elements</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAdIds">How to change ad ids</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppColors">How to change application colors</a></li>
@@ -305,7 +307,7 @@
                                         <img src="images/app/changeAppIconinAndroid.png" alt="Prime Web" />  
                                     </li> 
                                     <li>For IOS  open ios > Runner > Assets.xcassets > AppIcon.appiconset here you need to put your logo according to diffrent size.
-                                        <img src="images/app/changeAppIconInIOS.png" alt="Prime Web"/>
+                                        <img src="images/app/changeAppIconInIOS.png" alt="Prime Web" height="800"/>
                                     </li> 
                                 </ol>
                                 <hr> 
@@ -350,6 +352,29 @@
                                 </ol>
                                 <hr> 
                             </section>
+                            <section id="howToChangeTabsInBottomBar">
+                                <h4>How to Add/Remove tabs in bottom navigation bar</h4>
+                                <h6>To add new tab</h6>
+                                <ol>    
+                                    <li>
+                                        First add the lottie icons with light and dark brightness in assets/icons folder and add its variable in icons.dart file like below:
+                                        <img src="images/app/add_tab_icon.png" alt="Prime Web" />
+                                        Modify the navigationTabs list in Constants file to add or remove the tabs:
+                                        you can add the below code with modified value in the list,:
+                                        <pre>
+                                                    {
+                                                        'url': '',
+                                                        'label':'',
+                                                        'icon': ''
+                                                    },</pre>
+                                        <img src="images/app/add_tab_list.png" alt="Prime Web" />
+                                        <p style="color: red;" >     Note: Setting tab will be added in code, You cant modify it from this list.</p>
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
                             <section id="howToHideHeader">
                                 <h4>How to show/hide header/footer</h4>
                                 <ol>    
@@ -378,12 +403,12 @@
                                 <h4>How to change Splash logo and Color</h4>
                                 <ol>    
                                     <li>
-                                        To chnage splash logo, create logo in 'svg' format and replace 'splash_logo.svg' in icons folder
-                                        <img src="images/app/chnage_splash_logo.png" alt="Prime Web" /><br><br>
+                                        To change splash logo, create logo in 'svg' format and replace 'splash_logo.svg' in icons folder
+                                        <img src="images/app/change_splash_logo.png" alt="Prime Web" /><br><br>
                                         
                                     </li> 
                                     <li>
-                                        To chnage splash color, change the value of varibale as shown in below figure 
+                                        To change splash color, change the value of varibale as shown in below figure 
                                         <img src="images/app/change_splash_color.png" alt="Prime Web" />
                                         
                                     </li> 
@@ -391,22 +416,35 @@
                                 </ol>
                                 <hr> 
                             </section>
-                           
+                            
+                            <section id="howToChangeFloatingColor">
+                                <h4>How to change floating action button color</h4>
+                                <ol>    
+                                    <li>
+                                       Open lib->provider->theme_provider.dart file and change value of 'backgroundColor' in floatingActionButtonTheme (both in light and dark theme if required)
+                                        <img src="images/app/change_floating_color.png" alt="Prime Web" /><br><br>
+                                        
+                                    </li> 
+                                 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
                             <section id="howToChangeOnboardingScreen">
                                 <h4>How to change onboarding screen elements</h4>
                                 <ol>    
                                     <li>
-                                        To chnage onboarding images, create images in 'svg' format and replace 'onboarding_a.svg','onboarding_b.svg' & 'onboarding_c.svg' in icons folder
+                                        To change onboarding images, create images in 'svg' format and replace 'onboarding_a.svg','onboarding_b.svg' & 'onboarding_c.svg' in icons folder
                                         <img src="images/app/changeOnbrdngImage.png" alt="Prime Web" /><br><br>
                                         
                                     </li> 
                                     <li>
-                                        To chnage text of onboarding screens, change the value of below string varibale as shown in below figure 
+                                        To change text of onboarding screens, change the value of below string varibale as shown in below figure 
                                         <img src="images/app/changeOnbrdngText.png" alt="Prime Web" />
                                         
                                     </li> 
                                     <li>
-                                        To chnage Colors of onboarding screens, change the value of below color varibale as shown in below figure 
+                                        To change Colors of onboarding screens, change the value of below color varibale as shown in below figure 
                                         <img src="images/app/changeOnbrdngColor.png" alt="Prime Web" />
                                         
                                     </li> 
