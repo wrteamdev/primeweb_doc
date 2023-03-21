@@ -98,7 +98,9 @@
                         <li class="nav-item"><a href="#add_permission" class="nav-link">Add necessary Permissions</a>
                           
                             </li>
-
+                            <li class="nav-item"><a href="#solve_error" class="nav-link">How to solve common errors</a>
+                          
+                            </li>
                         <li class="nav-item"><a href="#create_accounts" class="nav-link">Create necessary Accounts</a>
                             <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link" href="#howToCreateAdmobAcct">How to Create Admob Account </a></li>
@@ -628,7 +630,22 @@
 <img src="images/app/addPermission2.png" alt="Prime Web" />
 </ol>
                             </section>
+                            <section id="solve_error">
+                                <h4>How to sovle common errors</h4>
+1. If you are getting below error while generating release apk then please lower the gradle version in 2 files as mentioned below:
+<img src="images/app/error1.png" alt="Prime Web" />
+  <ol>
+    <li>Open android->build.gradle file and change gradle to 4.1.0 as in below code<br>
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    </li>
+    <li>Open android->gradle->wrapper->gradle-wrapper.properties and change gradle to 6.7 as in below code<br>
+        distributionUrl=https\://services.gradle.org/distributions/gradle-6.7-all.zip
+    
+    </li>
+    <li>Now build it again and then generate release app</li>
+  </ol>
 
+                            </section>
                         <section id="create_accounts">
                             <section  id="howToIntegrateFirebase">
                                 <h4>How to integrate firebase</h4>
