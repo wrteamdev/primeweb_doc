@@ -174,8 +174,9 @@
                                         <li>Click on open
                                             <img src="images/app/flutter2.png" alt="Prime Web" />
                                         </li>
-                                        <li>Select folder of primeweb
-                                            <img src="images/app/flutter3.png" alt="Prime Web" />
+                                        <li>Select either primeWeb_firebase or primeWeb_oneSignal
+..accoring to your requirement for push notification                                           
+ <img src="images/app/flutter3.png" alt="Prime Web" />
                                         </li>
                                         <li>Now if you have not set 'flutter sdk' path before. then go to File->Settings
                                             <img src="images/app/flutter4.png" alt="Prime Web" />
@@ -600,7 +601,7 @@
                                             </ol>
                                 <li> Open android->src->main->AndroidManifest.xml file. uncomment required permissions as shown in below figure:</li>
                                 <img src="images/app/addPermission.png" alt="Prime Web" />
-                          
+                             
 
 <ol>
     <h5>IOS  -> List of permission (Note- just remove below required permissions from info.plist file)</h5>
@@ -629,6 +630,11 @@
 <li> Open ios/Runner/Info.plist file. uncomment required permissions as shown in below figure:</li>
 <img src="images/app/addPermission2.png" alt="Prime Web" />
 </ol>
+<p style="color: red;">Note - to enable download feature in app, please add below line in main() method of main.dart file along with the necessary above permissions</pre>
+                          
+<pre>            await Permission.storage.request();</pre>
+After adding this line, your main.dart file will look like this:
+<img src="images/app/storage_permission.png" alt="Prime Web" />
                             </section>
                             <section id="solve_error">
                                 <h4>How to sovle common errors</h4>
