@@ -631,7 +631,8 @@
 <img src="images/app/addPermission2.png" alt="Prime Web" />
 </ol>
 <p style="color: red;">Note - to enable download feature in app, please add below line in main() method of main.dart file along with the necessary above permissions</pre>
-                          
+           and you need to import the permission package in main.dart file:<br>
+           <pre>import 'package:permission_handler/permission_handler.dart';</pre>               
 <pre>            await Permission.storage.request();</pre>
 After adding this line, your main.dart file will look like this:
 <img src="images/app/storage_permission.png" alt="Prime Web" />
