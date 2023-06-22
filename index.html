@@ -84,6 +84,8 @@
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeTabsInBottomBar">How to add/remove tabs in bottom navigation bar</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideHeader">How to show/hide header/footer </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideSplash">How to Turn on/off Splash & Onboarding Screen </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToSetSplashColor">How to set colors for Splash Screen  </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToSetProgressColor">How to set colors for progress indicator  </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeSplashLogo">How to change splash Logo and Color</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeFloatingColor">How to change floating action button color</a></li>
                         
@@ -93,6 +95,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppFont">How to change application font</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeAppStrings">How to change application String Constants</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeSettingPages">How to change content of pages in Setting screen</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howTopreventSS">How to prevent user from taking screenshot of app</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a href="#add_permission" class="nav-link">Add necessary Permissions</a>
@@ -394,8 +397,33 @@
                                 <h4>How to show/hide Splash & Onboarding Screen</h4>
                                 <ol>    
                                     <li>
-                                       If you wnat to display splash screen or onboarding screen in app starting time then change this variable. Set true if you want to show it  [Note: Value must be boolean , i.e. either true or false]
+                                       If you want to display splash screen or onboarding screen in app starting time then change this variable. Set true if you want to show it  [Note: Value must be boolean , i.e. either true or false]
                                         <img src="images/app/changesplash.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+                            <section id="howToSetSplashColor">
+                                <h4>How to set colors for Splash Screen</h4>
+                                <ol>    
+                                    <li>
+                                       To set linear gradient colors in splash screen, change the colors for both splashBackColor1 and splashBackColor2. If you dont want to set gradient color then set the same color for both variables
+                                        <img src="images/app/splash_color.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+                            <section id="howToSetProgressColor">
+                                <h4>How to set colors for progress indicator</h4>
+                                <ol>    
+                                    <li>
+      
+          To change colors of linear progress indicator in webview, change colors of below 3 variables. To change color of Circular progress indicator, set the value of variable 'indicatorColor1'
+                                        <img src="images/app/progress_color.png" alt="Prime Web" />
                                         
                                     </li> 
                                     
@@ -540,8 +568,39 @@
                                 </ol>
                                 <hr> 
                             </section>
-</section>
+<section id="howTopreventSS">
+    <h4>How to prevent user from taking screenshot of app</h4>
+    <ol><h5>For Android:</h5></ol>
+    
 
+      <li>  inside your mainActivity.kt, add the below line </li>
+          <pre>window.addFlags(LayoutParams.FLAG_SECURE)</pre>
+       after adding this line, your file will look like this:
+       <img src="images/app/prevent_ss_android.png" alt="Prime Web" />
+         
+    </ol>
+    <ol><h5>For iOS:</h5>
+      <li>in your AppDelegate.swift you should create a window extension just like below:</li>
+      <pre>
+        extension UIWindow {
+            func makeSecure() {
+                let field = UITextField()
+                field.isSecureTextEntry = true
+                self.addSubview(field)
+                field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+                field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+                self.layer.superlayer?.addSublayer(field.layer)
+                field.layer.sublayers?.first?.addSublayer(self.layer)
+              }
+            }
+      </pre>
+<li>then call the new window extension in your application function:</li>
+<pre>self.window.makeSecure()</pre>
+<li>your AppDelegate.swift should look like this:</li>
+<a href="https://drive.google.com/file/d/1kWkwCzVvkeQFtI4f6hs-zr5k2XyXHw3U/view?usp=share_link" title="AppDelegate" target="_blank">AppDelegate</a>
+</ol>  
+<hr> 
+</section>
                             <section id="howToCreateAdmobAcct">
                                 <h4>Set up admob in app</h4>
                                 <ul>
@@ -573,7 +632,7 @@
                             </section>
                             <section id="add_permission">
                                 <h4>How to add necessary permissions</h4><ol>
-
+      
                                     <ol>
                                     <h5>Android -> List of permission (Note- just remove below required permissions from AndroidManifest file)</h5>
                                            
@@ -601,7 +660,7 @@
                                             </ol>
                                 <li> Open android->src->main->AndroidManifest.xml file. uncomment required permissions as shown in below figure:</li>
                                 <img src="images/app/addPermission.png" alt="Prime Web" />
-                             
+                          
 
 <ol>
     <h5>IOS  -> List of permission (Note- just remove below required permissions from info.plist file)</h5>
@@ -630,13 +689,6 @@
 <li> Open ios/Runner/Info.plist file. uncomment required permissions as shown in below figure:</li>
 <img src="images/app/addPermission2.png" alt="Prime Web" />
 </ol>
-<p style="color: red;">Note - to enable download feature in app, please add below line in main() method of main.dart file along with the necessary above permissions</pre>
-                        
-<pre>            await Permission.storage.request();</pre>
-After adding this line, your main.dart file will look like this:
-<img src="images/app/storage_permission.png" alt="Prime Web" />
-and you need to import the permission package in main.dart file:<br>
-<pre>import 'package:permission_handler/permission_handler.dart';</pre> 
                             </section>
                             <section id="solve_error">
                                 <h4>How to sovle common errors</h4>
