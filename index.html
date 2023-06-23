@@ -638,6 +638,12 @@
                                            
                                                 <li>For storage access</li>
                                                 <p>  &#60;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&#62;</p>
+                                                <p>Note: For storage permission in Android 13 , please add below 5 permissions</p>
+                                            <p>  &#60; uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&#62;</p>
+   <p>  &#60;   uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&#62;</p>
+   <p>  &#60;   uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /&#62;</p>
+  <p>  &#60;  uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/&#62;</p>
+  <p>  &#60;  uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/&#62;</p>
                                                 <li>For camera access</li>
                                                 <p>  &#60;uses-permission android:name="android.permission.CAMERA" /&#62;</p>
                                                 <p>  &#60;uuses-feature android:name="android.hardware.camera" /&#62;</p>
@@ -660,10 +666,11 @@
                                             </ol>
                                 <li> Open android->src->main->AndroidManifest.xml file. uncomment required permissions as shown in below figure:</li>
                                 <img src="images/app/addPermission.png" alt="Prime Web" />
-                          
+                                <p style="color: red;">Note: If your website does not ask for storage access permission from user while downloading file then please enable below variable in Constant file</p>
+                             <img src="images/app/enable_storage_permission.png" alt="Prime Web" />
 
 <ol>
-    <h5>IOS  -> List of permission (Note- just remove below required permissions from info.plist file)</h5>
+    <h5>IOS  -> List of permission (Note- just uncomment below required permissions from info.plist file)</h5>
                                            
     <li>For galley access</li>
     <p>  &#60;key>NSPhotoLibraryAddUsageDescription &#60;/key&#62;<br>
