@@ -81,6 +81,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeURL">How to set your Website URL</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeDisplay">How to Turn on/off interstitial, banner and Open Ads</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeBottomBar">How to change bottom bar</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToHideFloatingButton">How to hide floating action button</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToChangeTabsInBottomBar">How to add/remove tabs in bottom navigation bar</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideHeader">How to show/hide header/footer </a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToHideSplash">How to Turn on/off Splash & Onboarding Screen </a></li>
@@ -352,6 +353,20 @@
                                     <li>
                                        If you want to select the bottom navigation bar same as demo app then keep this variable true and if you want floating action button then keep it false. [Note: Value must be boolean , i.e. either true or false]
                                         <img src="images/app/change_borrom_bar.png" alt="Prime Web" />
+                                        
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+                            <section id="howToHideFloatingButton">
+                                <h4>How to hide floating action button</h4>
+                                <ol>    
+                                    <li>
+                                      If you want to hide floating action button then open lib-> helpers-> Constant.dart file and make the values of both 'showBottomNavigationBar' and 'showFloatingActionButton' varables to false.
+                                      <p style="color: red;" >Note:  According to Google play store and Apple store policy , Only webview apps without any native features might be subject to rejection.
+                                    So, if client remove setting screen from app , then it is solely his/her responsibility for app's confirmation on store. </p>
+                                      <img src="images/app/hide_floating.png" alt="Prime Web" /> 
                                         
                                     </li> 
                                     
