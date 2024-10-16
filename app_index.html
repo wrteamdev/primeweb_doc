@@ -132,9 +132,6 @@
                                     navigation bar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#howToHideHeader">How to show/hide header/footer</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="#howToHideOnbording">How to Turn on/off Onboarding
                                     Screen</a>
                             </li>
@@ -198,12 +195,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#howToIntegrateFirebase">How to integrate firebase</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#howToIntegrateOneSignal">How to integrate OneSignal</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#howToAddDynamicLink">How to add dynamic links in firebse</a>
                             </li>
                         </ul>
                     </li>
@@ -416,9 +407,7 @@
                                     outlined in the section <a href="#howToIntegrateFirebase">How to integrate
                                         Firebase</a>.
                                     <br>
-                                    2) If you've run the 'prime_web_onesignal' app, initially set up OneSignal by
-                                    following the instructions provided in the section <a
-                                        href="#howToIntegrateOneSignal">How to integrate OneSignal</a>.
+
                                 </div>
                                 <li>
                                     To run the iOS app, follow these steps in the terminal:
@@ -620,14 +609,6 @@
                             <hr>
                         </section>
 
-                        <section id="howToHideHeader">
-                            <h4>How to Show/Hide Header and Footer:</h4>
-
-                            <p>To show or hide the header and footer of your website, change the values of the following
-                                variables. Set to <code>true</code> if you want to hide it:</p>
-                            <img src="images/change_header_footer_visibility.webp">
-                            <hr>
-                        </section>
                         <section id="howToHideOnbording">
                             <h4>How to Show/Hide Onboarding Screen:</h4>
 
@@ -983,67 +964,8 @@
                                 <hr>
                         </section>
 
-                        <section id="howToIntegrateOneSignal">
-                            <h4>How to Integrate OneSignal:</h4>
 
-                            <ol>
-                                <li>Create a OneSignal project in your OneSignal account and choose the Android
-                                    platform.</li>
-                                <img src="images/app/onesignal1.webp">
-                                <li>Go to your Firebase Console -> Project Settings -> Cloud Messaging and copy the
-                                    'Server Key' and 'Sender ID.'</li>
-                                <img src="images/app/onesignal2.webp">
-                                <li>Paste those values one by one in your OneSignal project settings.</li>
-                                <img src="images/app/onesignal3.webp">
-                                <li>Choose the Target SDK as Flutter.</li>
-                                <img src="images/app/onesignal4.webp">
-                                <li>Copy the App ID from OneSignal.</li>
-                                <img src="images/app/onesignal5.webp">
-                                <li>Paste this App ID in your Flutter project at
-                                    <code>lib/constants/constants.dart</code>. (Don't change variable names).
-                                </li>
-                                <img src="images/app/onesignal6.webp">
-                                <li>If you didn't copy the App ID earlier, you can retrieve the OneSignal App ID from
-                                    your OneSignal project settings.</li>
-                                <img src="images/app/onesignal7.webp">
-                            </ol>
-                            <p>You have successfully connected your Android application to your OneSignal account.</p>
 
-                            <p><strong>Note:</strong> Follow the instructions carefully and ensure that you don't change
-                                the variable names when pasting values in your Flutter project.</p>
-
-                            <p><strong>How to Set OneSignal Notification Icon:</strong></p>
-                            <p>If you don't want to use the default bell icon in notifications, you need to generate
-                                icons specifically for notifications. with name
-                                <code>ic_stat_onesignal_default.webp</code>
-                            </p>
-                            <p>And paste into each into folder according to their size.</p>
-                            <img src="images/one_signal_notification_icon.webp">
-
-                            <p><strong>For iOS:</strong></p>
-                            <ol>
-                                <li>Create a new app within your OneSignal account and select the iOS platform.</li>
-                                <img src="images/app/onesignal_ios1.webp">
-                                <li>Upload the .p12 certificate, and you can refer to this guide for assistance <a
-                                        href="https://documentation.onesignal.com/docs/generate-an-ios-push-certificate">here</a>.
-                                </li>
-                                <img src="images/app/onesignal_ios2.webp">
-                                <li>Choose Flutter as the SDK.</li>
-                                <img src="images/app/onesignal_ios3.webp">
-                            </ol>
-                            <p><strong>IMPORTANT:</strong> Ensure to replace the provided iOS Bundle ID
-                                'com.wrteam.webviewprime' with your specific iOS Bundle ID throughout the project.
-                                Additionally, replace the existing Bundle ID in the OneSignal folder with your own.</p>
-                            <img src="images/app/onesignal8.webp">
-
-                            <hr>
-                        </section>
-
-                        <section id="howToAddDynamicLink">
-                            <h4>How to Add Dynamic Link in App</h4>
-                            <img src="images/app/addDeeplink.webp">
-                        </section>
-                        <hr>
                     </section>
 
                     <section id="generate_release">
