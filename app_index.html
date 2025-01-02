@@ -246,7 +246,7 @@
                                     destination for the Flutter SDK (e.g.,
                                     <code>C:\flutter</code>). Avoid installing Flutter in locations such as
                                     <code>C:\Program Files</code>
-                                    .
+                                    .`
                                 </li>
                                 <li>
                                     Let's add Flutter to the environment path. Search 'environment' in the Start bar and
@@ -328,9 +328,7 @@
                                     the Android SDK section, unmark the 'Hide Obsolete Packages' option, and select
                                     'Android SDK Command Line Tool Latest.' Proceed by applying the changes and clicking
                                     'OK.'<br>
-                                    This action will initiate the download of the most recent version, as shown in the
-                                    image below.
-                                    <img src="images/app/upgrade2.webp">
+                                    This action will initiate the download of the most recent version
                                 </li>
                             </ol>
                             <hr>
@@ -338,31 +336,12 @@
 
                         <section id="howToChangePackageName">
                             <h4>3. Change package name</h4>
+
                             <ol>
                                 <li>
-                                    Your package directory will be subdivided into separate directories.
-                                    <img src="images/app/packagename_2.webp">
-                                </li>
-                                <li>
-                                    Choose each directory to rename, then right-click, select Refactor, and choose
-                                    Rename Current in the pop-up dialog.
-                                    <img src="images/app/packagename_3.webp">
-                                </li>
-                                <li>
-                                    Please input the updated name and select Refactor. Kindly allow a moment for Android
-                                    Studio to process and implement all modifications.
-                                    <img src="images/app/packagename_4.webp">
-                                </li>
-                                <li>
-                                    Upon modifying 'com.wrteam.prime_web,' your directory should reflect the following
-                                    structure (note that the new name provided is for illustrative purposes only).
-                                    Please consider assigning a meaningful package name.
-                                    <img src="images/app/packagename_5.webp">
-                                    <img src="images/app/packagename_6.webp">
-                                </li>
-                                <li>
-                                    Press Ctrl + Shift + R to replace the old package name with your new one throughout
-                                    the entire codebase.
+                                    If you are using Android Studio, press <code> Ctrl + Shift + R</code> and if you are
+                                    using VS Code, press <code>Ctrl + Shift + F </code> to replace the old package name
+                                    with the new one throughout the entire codebase.
                                     <img src="images/app/packagename_7.webp">
                                 </li>
                                 <li>
@@ -373,6 +352,41 @@
                                     'com.wrteam.webviewprime,' so replace it with your designated package name.
                                     <img src="images/app/packagename_8.webp">
                                     <br>
+                                </li>
+                                <li>
+                                    <p>
+                                        When You are changing package name the you also need change name of folders
+                                        according to your package name in<code>(android\app\src\main\kotlin)</code>
+                                        location in
+                                        project. For Example if Package name is<code>"com.wrteam.webviewprime"</code>
+                                        Then
+                                        inside
+                                        kotlin folder folder stucture are <code>(com\wrteam\webviewprime)</code> now
+                                        this
+                                        folder
+                                        structure will change as per your package name if your package name is
+                                        <code>"wrteam.primeweb.webviewprime"</code>then new folder structure is
+                                        wrteam\primeweb\webviewprime. for
+                                        change name of this folders just open your project folder navigate inside the
+                                        kotlin
+                                        folder just rename the folders according to your package name . Note : (Sometime
+                                        you
+                                        got issue dou to this reason.)
+                                    </p>
+                                    <img src="images/app/packagename_9.webp">
+                                </li>
+                                <li>
+                                    Some Doubt regarding package name change
+                                    <p>1. what if my package name is like this
+                                        <code>com.primeweb.webviewprime.view,</code> so how
+                                        can i
+                                        make folder structure ? <br>
+                                        Ans. => in this situation you have to add one folder according to your package
+                                        name
+                                        , now you have 4 folder insode the kotlin folder like this
+                                        <code>\com\primeweb\webviewprime\view\</code>
+                                    </p>
+
                                 </li>
                             </ol>
                             <hr>
@@ -963,30 +977,70 @@
                     <section id="generate_release">
                         <section id="howToGenerateReleaseApk">
                             <h4>Generate Release APKs</h4>
-
-                            <p><strong>To generate a release bundle for Android in Android Studio, follow these
-                                    steps:</strong></p>
+                            <p><strong>Create and Add Key Store File for Android</strong></p>
                             <ol>
-                                <li>Right-click on the 'android' module in your Flutter project.</li>
-                                <li>Find the 'flutter' option and click on 'Open android module in Android Studio.'</li>
-                                <img src="images/apk1.webp">
-                                <li>If the Flutter option is disabled, go to the File menu in Android Studio, select
-                                    'Open,' locate your Flutter project's android module, and open it.</li>
-                                <img src="images/apk2.webp">
-                                <img src="images/apk3.webp">
-                                <li>Generate the release APK from the newly opened module.</li>
+                                <li>
+                                    <p>First, verify whether the release is already specified in the build.gradle file.
+                                        If it is not, set the release.</p>
+                                    <img src="images/app/build-gradle.webp">
+                                </li>
+                                <li>
+                                    To generate a keystore file, run the following command:
+                                    <br>
+                                    <br>
+                                    <code>keytool -genkey -v -keystore your-keystore-file.jks -keyalg RSA -keysize 2048 -validity 10000 -alias your-alias</code>
+                                    <br>
+                                    <br>
+                                    <p>You can replace <strong>"your-keystore-file.jks"</strong> with your preferred
+                                        filename, but ensure you keep the <strong>".jks"</strong> extension. Similarly,
+                                        you can change <strong>"your-alias"</strong> as needed, but make sure to
+                                        remember it. During this process, you will be prompted to set a password; please
+                                        note that the password characters won't be visible on the screen.</p>
+                                    <p>Additional information may be requested, but you can simply press
+                                        Enter to skip those as they are optional fields.</p>
+                                </li>
+                                <li>
+                                    Create a file named <strong>"key.properties"</strong> in your project's
+                                    <strong>"android"</strong> folder and add the following details, which correspond to
+                                    the information you used in the previous step:
+
+                                    <code>
+                                    <br>
+                                    <br>
+                                        storePassword=[your-password-from-previous-step] <br>
+                                        keyPassword=[your-password-from-previous-step] <br>
+                                        keyAlias=[your-alias-from-previous-step] <br>
+                                        storeFile=[your-keystore-file-location]
+                                    </code>
+                                    <br>
+                                    <br>
+                                    <p>Replace the placeholders (<strong>"[]"</strong> brackets) with the actual details
+                                        you used. Once these two steps are completed, you can generate either an APK
+                                        file using the following command:</p>
+                                    <code>
+                                    flutter build apk
+                                     </code>
+                                    <br>
+                                    <br>
+                                    <p>Or an app bundle file for the Play Store upload with:</p>
+                                    <code>
+                                     flutter build appbundle
+                                     </code>
+                                </li>
                             </ol>
-                            <p>Wait for the build process to complete. Once finished, go to the Build menu, where you'll
-                                find the option 'Generate Signed Bundle/APK.'</p>
-                            <img src="images/apk4.webp">
-                            <p>Choose 'Android App Bundle' and, if it's your first time creating an APK, click on
-                                'Create New' for the keystore path (remember to save this file for future use). For
-                                subsequent updates, always choose the existing keystore file.</p>
-                            <img src="images/apk5.webp">
-                            <p>Provide all required information and click 'Next.' From the options, select 'Release.'
-                            </p>
-                            <img src="images/apk6.webp">
-                            <hr>
+                            <img src="images/app/release-apk.webp">
+                            <br>
+                            <br>
+                            <p>Follow these links for more information on generateing the release version:</p>
+                            <ol>
+                                <li> To generate release android app-bundle and publish to playstore follow
+                                    <a
+                                        href="https://flutter.dev/docs/deployment/android">https://flutter.dev/docs/deployment/android</a>
+
+                                </li>
+                            </ol>
+                            <br>
+
                         </section>
                         <section id="iosRelease">
                             <h4>Steps to Publish iOS App to App Store</h4>
